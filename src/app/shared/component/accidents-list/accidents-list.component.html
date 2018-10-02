@@ -1,0 +1,19 @@
+<div class="accidents-list">
+  <div class="accidents-list__indication">{{isTreated ? 'Accidents Treated' : 'Accidents non Treated'}}</div>
+  <table class="accidents-list__table">
+    <thead>
+      <tr>
+        <th *ngFor="let header of headers">{{header}}</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let accident of data"
+          (click)="onItemClick(accident)">
+        <td>{{accident.MDA}}</td>
+        <td>{{accident.EventTime | localeTime}}</td>
+        <td>{{accident.mechanism}}</td>
+        <td>{{accident.kinematic}}</td>
+      </tr>
+    </tbody>
+  </table>
+</div>

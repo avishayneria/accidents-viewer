@@ -1,0 +1,89 @@
+:host{
+  display: block;
+  .accidents-list {
+    thead, tbody, tr, td, th {
+      display: block;
+    }
+
+    tr:after {
+      content: ' ';
+      display: block;
+      visibility: hidden;
+      clear: both;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      thead {
+        width: 100%;
+        border: none;
+        padding-right: 8px;
+        tr {
+          th {
+            width: 25%;
+            height: 25px;
+            float: left;
+            background: transparent;
+            font-size: 12px;
+            font-weight: normal;
+            text-align: left;
+            color: #484848;
+            margin: 0;
+            display: flex;
+            align-items: center;
+            padding-left: 8px;
+          }
+        }
+      }
+
+      tbody {
+        padding-right: 8px;
+        height: 300px;
+        overflow-y: auto;
+        tr {
+          border-bottom: 5px solid transparent;
+          cursor: pointer;
+          &:last-child {
+            border-bottom: none;
+          }
+          &:hover {
+            td {
+              transition: 0.5s;
+              background: #d7f2f9;
+            }
+          }
+          td {
+            width: 25%;
+            height: 42px;
+            display: flex;
+            align-items: center;
+            background: #fff;
+            padding: 0 0 0 12px;
+            margin: 0;
+            float: left;
+            border-top: solid 1px #dfe6ed;
+            border-bottom: solid 1px #dfe6ed;
+
+            &:first-child {
+              border-left: solid 1px #dfe6ed;
+            }
+            &:last-child {
+              border-right: solid 1px #dfe6ed;
+            }
+
+          }
+        }
+      }
+    }
+    &__indication {
+      display: flex;
+      justify-content: center;
+      margin: 15px 0;
+      padding-right: 10px;
+      font-size: 24px;
+      text-decoration: underline;
+      color: #f6630e;
+    }
+  }
+}

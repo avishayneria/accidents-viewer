@@ -1,0 +1,14 @@
+<div *ngIf="!loading; else loader">
+  <accidents-list [headers]="accidentsHeaders"
+                  [data]="accidents | isTreated: true"
+                  [isTreated]="true"
+                  (itemClicked)="displayAccidentDetails($event)"></accidents-list>
+
+  <accidents-list [headers]="accidentsHeaders"
+                  [data]="accidents | isTreated: false"
+                  [isTreated]="false"
+                  (itemClicked)="displayAccidentDetails($event)"></accidents-list>
+</div>
+<ng-template #loader>
+  <loader></loader>
+</ng-template>

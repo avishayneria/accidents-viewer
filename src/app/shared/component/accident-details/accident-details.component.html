@@ -1,0 +1,22 @@
+<div class="accident-details">
+  <div class="accident-details__injuries">
+    <div class="accident-details__injuries__headers">
+      <div class="accident-details__injuries__headers__description">Description</div>
+      <div class="accident-details__injuries__headers__severity">Severity</div>
+    </div>
+    <div class="accident-details__injuries__item" *ngFor="let injury of data.injuries">
+      <div class="accident-details__injuries__item__description">{{injury.description}}</div>
+      <div class="accident-details__injuries__item__severity
+                  accident-details__injuries__item__severity--{{injury.severity}}">
+        {{injury.severity}}
+      </div>
+    </div>
+  </div>
+  <div class="accident-details__location">
+    <agm-map [latitude]="data.gps.latitude"
+             [longitude]="data.gps.longitude"
+             [zoom]="zoom">
+      <agm-marker [latitude]="data.gps.latitude" [longitude]="data.gps.longitude"></agm-marker>
+    </agm-map>
+  </div>
+</div>

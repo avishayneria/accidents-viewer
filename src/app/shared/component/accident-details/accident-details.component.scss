@@ -1,0 +1,58 @@
+
+:host{
+  display: block;
+  .accident-details {
+    display: flex;
+    &__injuries {
+      flex: 1;
+      &__headers {
+        display: flex;
+        font-size: 15px;
+        color: #484848;
+        &__description {
+          width: 80%;
+        }
+        &__severity {
+          width: 20%;
+          padding-left: 10px;
+        }
+      }
+      &__item {
+        display: flex;
+        font-size: 16px;
+        border-bottom: 1px solid #cccccc;
+        padding: 10px 0;
+        color: #484848;
+        &:last-child {
+          border-bottom: none;
+        }
+        &__description {
+          width: 80%;
+        }
+        &__severity {
+          width: 20%;
+          text-transform: capitalize;
+          padding-left: 10px;
+          &--high {
+            color: red;
+          }
+          &--medium {
+            color: orange;
+          }
+          &--low {
+            color: #0ea620;
+          }
+        }
+      }
+    }
+    &__location {
+      width: 500px;
+      height: 400px;
+      margin-left: 20px;
+      agm-map {
+        height: 100%;
+        width: 100%;
+      }
+    }
+  }
+}

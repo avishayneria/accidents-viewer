@@ -1,0 +1,15 @@
+:host {
+  display: block;
+  height: calc(100% - 40px);
+  .single-accident {
+    height: 100%;
+    padding: 15px;
+    &__title {
+      font-size: 24px;
+      margin-bottom: 30px;
+      color: #292929;
+      padding-bottom: 10px;
+      border-bottom: 1px solid #292929;
+    }
+  }
+}
