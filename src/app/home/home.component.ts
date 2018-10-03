@@ -1,8 +1,8 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AccidentService} from "../shared/services/accident.service";
-import {Router} from "@angular/router";
-import {Accident} from "../shared/interfaces/accident.interface";
-import {Subscription} from "rxjs/internal/Subscription";
+import {AccidentService} from '../shared/services/accident.service';
+import {Router} from '@angular/router';
+import {Accident} from '../shared/interfaces/accident.interface';
+import {Subscription} from 'rxjs/internal/Subscription';
 
 @Component({
   selector: 'app-home',

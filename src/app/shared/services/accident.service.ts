@@ -1,8 +1,8 @@
 import { Injectable } from '@angular/core';
-import {HttpClient} from "@angular/common/http";
-import {Observable} from "rxjs/internal/Observable";
-import {BehaviorSubject} from "rxjs/internal/BehaviorSubject";
-import {Accident} from "../interfaces/accident.interface";
+import {HttpClient} from '@angular/common/http';
+import {Observable} from 'rxjs/internal/Observable';
+import {BehaviorSubject} from 'rxjs/internal/BehaviorSubject';
+import {Accident} from '../interfaces/accident.interface';
 
 @Injectable({
   providedIn: 'root'
@@ -18,7 +18,9 @@ export class AccidentService {
   getAccidents() {
    this.http.get(this.url).subscribe((res: any) => {
      if (res.Data) {
-       this._accidents$.next(res.Data);
+       this._accidents$.next(res.Data.sort((a, b) => {
+         return new Date(a.EventTime).getTime() - new Date(b.EventTime).getTime();
+       }));
      } else {
        this._accidents$.next([]);
      }

@@ -1,5 +1,5 @@
 import {Component, EventEmitter, Input, Output} from '@angular/core';
-import {Accident} from "../../interfaces/accident.interface";
+import {Accident} from '../../interfaces/accident.interface';
 
 @Component({
   selector: 'accidents-list',
@@ -15,6 +15,6 @@ export class AccidentsListComponent {
   constructor() { }
 
   onItemClick(item: Accident): void {
-    this.itemClicked.emit(item)
+    this.itemClicked.emit(item);
   }
 }

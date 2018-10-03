@@ -1,5 +1,5 @@
 import {Component, OnInit} from '@angular/core';
-import {AccidentService} from "./shared/services/accident.service";
+import {AccidentService} from './shared/services/accident.service';
 
 @Component({
   selector: 'app-root',

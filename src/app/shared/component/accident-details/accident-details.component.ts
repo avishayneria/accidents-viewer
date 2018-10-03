@@ -1,5 +1,5 @@
 import {Component, Input} from '@angular/core';
-import {Accident} from "../../interfaces/accident.interface";
+import {Accident} from '../../interfaces/accident.interface';
 
 @Component({
   selector: 'accident-details',
@@ -9,7 +9,6 @@ import {Accident} from "../../interfaces/accident.interface";
 export class AccidentDetailsComponent {
   @Input() data: Accident;
   public zoom: number = 14;
-
   constructor() { }
 
 }

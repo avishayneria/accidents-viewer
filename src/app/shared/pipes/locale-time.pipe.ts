@@ -5,7 +5,7 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class LocaleTimePipe implements PipeTransform {
 
-  transform(value: string): any {
+  transform(value: string): string {
     return new Date(value).toLocaleString();
   }
 

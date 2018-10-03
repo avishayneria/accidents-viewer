@@ -1,9 +1,9 @@
 import {Component, OnDestroy, OnInit} from '@angular/core';
-import {AccidentService} from "../shared/services/accident.service";
-import {Subscription} from "rxjs/internal/Subscription";
+import {AccidentService} from '../shared/services/accident.service';
+import {Subscription} from 'rxjs/internal/Subscription';
 
 @Component({
-  selector: 'app-single-accident',
+  selector: 'single-accident',
   templateUrl: './single-accident.component.html',
   styleUrls: ['./single-accident.component.scss']
 })
@@ -24,6 +24,6 @@ export class SingleAccidentComponent implements OnInit, OnDestroy {
   ngOnDestroy() {
     this.subscriptions.forEach(subscriber => {
       subscriber.unsubscribe();
-    })
+    });
   }
 }

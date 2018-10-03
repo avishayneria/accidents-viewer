@@ -1,8 +1,8 @@
 import { NgModule } from '@angular/core';
-import {RouterModule, Routes} from "@angular/router";
-import {HomeComponent} from "./home/home.component";
-import {SingleAccidentComponent} from "./single-accident/single-accident.component";
-import {GuardService} from "./shared/services/guard.service";
+import {RouterModule, Routes} from '@angular/router';
+import {HomeComponent} from './home/home.component';
+import {SingleAccidentComponent} from './single-accident/single-accident.component';
+import {GuardService} from './shared/services/guard.service';
 
 const routes: Routes = [
   {
