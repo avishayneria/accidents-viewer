@@ -15,7 +15,7 @@ export class AccidentService {
   public accident$: Observable<Accident> = this._accident$.asObservable();
   constructor(private http: HttpClient) { }
 
-  getAccidents() {
+  getAccidents(): void {
    this.http.get(this.url).subscribe((res: any) => {
      if (res.Data) {
        this._accidents$.next(res.Data.sort((a, b) => {
